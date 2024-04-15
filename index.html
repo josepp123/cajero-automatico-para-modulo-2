@@ -1,96 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Cajero Automático</title>
-</head>
-
-<body>
-  <div id="cajero">
-    <h2>Selecciona una cuenta:</h2>
-    <select id="cuentas">
-      <option value="0">Persona 1</option>
-      <option value="1">Persona 2</option>
-      <option value="2">Persona 3</option>
-    </select>
-    <br><br>
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="ingresar()">Ingresar</button>
-    <div id="operaciones" style="display: none;">
-      <h3>Opciones:</h3>
-      <button onclick="consultarSaldo()">Consultar saldo</button>
-      <button onclick="ingresarMonto()">Ingresar monto</button>
-      <button onclick="retirarMonto()">Retirar monto</button>
-    </div>
-    <div id="resultado" style="display: none;">
-      <h3>Resultado:</h3>
-      <p id="mensaje"></p>
-    </div>
-  </div>
-
-  <script>
-    var cuentas = [
-      { nombre: "Mali", saldo: 200 },
-      { nombre: "Gera", saldo: 290 },
-      { nombre: "Maui", saldo: 67 }
-    ];
-
-    var cuentaSeleccionada = null;
-
-    function ingresar() {
-      var password = document.getElementById("password").value;
-      var indexCuenta = document.getElementById("cuentas").value;
-
-      if (cuentas[indexCuenta].password === password) {
-        cuentaSeleccionada = cuentas[indexCuenta];
-        document.getElementById("operaciones").style.display = "block";
-      } else {
-        mostrarMensaje("Contraseña incorrecta. Intenta de nuevo.");
-      }
-    }
-
-    function consultarSaldo() {
-      mostrarMensaje("Saldo actual: $" + cuentaSeleccionada.saldo);
-    }
-
-    function ingresarMonto() {
-      var monto = prompt("Ingrese el monto a ingresar:");
-
-      if (monto !== null) {
-        monto = parseFloat(monto);
-        if (!isNaN(monto) && monto > 0) {
-          cuentaSeleccionada.saldo += monto;
-          mostrarMensaje("Se ha ingresado $" + monto + ". Nuevo saldo: $" + cuentaSeleccionada.saldo);
-        } else {
-          mostrarMensaje("Monto inválido.");
-        }
-      }
-    }
-
-    function retirarMonto() {
-      var monto = prompt("Ingrese el monto a retirar:");
-
-      if (monto !== null) {
-        monto = parseFloat(monto);
-        if (!isNaN(monto) && monto > 0 && monto <= cuentaSeleccionada.saldo && cuentaSeleccionada.saldo - monto >= 10) {
-          cuentaSeleccionada.saldo -= monto;
-          mostrarMensaje("Se ha retirado $" + monto + ". Nuevo saldo: $" + cuentaSeleccionada.saldo);
-        } else {
-          mostrarMensaje("Monto inválido o saldo insuficiente.");
-        }
-      }
-    }
-
-    function mostrarMensaje(mensaje) {
-      document.getElementById("mensaje").textContent = mensaje;
-      document.getElementById("resultado").style.display = "block";
-    }
-  </script>
-</body>
-</html>-->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -99,26 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Cajero Automático</title>
-  <!-- <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-    }
-    #cajero {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-  </style> -->
+
 </head>
 <body>
+  <header>
+
+  </header>
   <div id="cajero">
     <h2>Inicio de sesión</h2>
     <input type="text" id="username" placeholder="Nombre de usuario">
